@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.h-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 650px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.h-text span {
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.h-text h1 {
+    font-size: 3em;
+    letter-spacing: 3px;
+}
+
+.h-text a {
+    text-decoration: none;
+    background: darkred;
+    padding: 10px 20px;
+    color: #fff;
+    letter-spacing: 4px;
+}

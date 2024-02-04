@@ -1,0 +1,16 @@
+<nav class="navbar">
+    <div class="navdiv">
+        <div class="logo"><a class="{% if navbar == 'homePage' %} active {% endif %}" href="{% url 'homePage' %}">GED<span>TECH</span></a></div>
+        <ul>
+            <li><a class="{% if navbar == 'servicesPage' %} active {% endif %}" href="/create/">Services</a></li>
+
+            <li><a class="{% if navbar == 'contactPage' %} active {% endif %}" href="{% url 'contactPage' %}">Contact</a></li>
+
+            <li><a class="{% if navbar == 'aboutPage' %} active {% endif %}" href="{% url 'aboutPage' %}">About Us</a></li>
+
+            <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </a></li>
+        </ul>
+    </div>
+</nav>

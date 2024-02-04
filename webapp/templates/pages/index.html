@@ -1,0 +1,23 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GEDTECH</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" type="image/png" href="gedtech.png"/>
+        <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static '/css/footer.css' %}">
+    </head>
+
+<body>
+    {% include 'pages/navbar.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include 'pages/footer.html' %}
+</body>
+</html>

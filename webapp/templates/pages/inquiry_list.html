@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inquiries</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/inquiry_list.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/footer.css' %}">
+</head>
+<body>
+    <div class="header">
+        <h1>Inquiries</h1>
+    </div>
+
+    <div class="list">
+        <table>
+            {% for inquiry in object_list %}
+            <tr>
+                <td>{{ inquiry.name }}</td>
+                <td>{{ inquiry.created_at }}</td>
+                <td>
+                    <a href="{% url 'update_inquiry' pk=inquiry.pk %}">Update</a>
+                    <form action="{% url 'delete_inquiry' pk=inquiry.pk %}" method="post" style="display: inline;">
+                        {% csrf_token %}
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">No inquiries yet.</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="cnew">
+            <a href="{% url 'create_inquiry' %}">Create New</a> 
+        </div>
+    </div>
+
+    
+       
+
+</body>
+</html>
